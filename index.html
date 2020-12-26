@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>small game in a canvas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="myCanvas"  width="400" height="400"></canvas>
+  
+  <div class="menuContainer">
+    <div class="menu">
+      <h1>Pause:</h1>
+      <form action="" name="options">
+        <div class="form-row">
+          <label for="playerName">Player name: </label>
+          <input type="text" name="playerName" id="playerName">
+        </div>
+
+        <div class="form-row">
+        <label for="ballsCount">Balls count: </label>
+          <input type="range" name="ballsCount" id="ballsCount" min="1" max="200" step="1" value="1" class="optionsInput">
+          <span class="optionsValue"></span>
+        </div>
+        
+        <div class="form-row">
+          <label for="maxSpeed">Max speed: </label>
+          <input type="range" name="maxSpeed" id="maxSpeed" min="1" max="30" step="1" value="10" class="optionsInput">
+          <span class="optionsValue"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="minBallSize">Min ball size: </label>
+          <input type="range" name="minBallSize" id="minBallSize"  min="1" max="100" step="1" value="10" class="optionsInput">
+          <span class="optionsValue"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="maxBallSize">Max ball size: </label>
+          <input type="range" name="maxBallSize" id="maxBallSize"  min="1" max="100" step="1" value="35" class="optionsInput"> 
+          <span class="optionsValue"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="playerSize">Player size: </label>
+          <input type="range" name="playerSize" id="playerSize" min="1" max="100" step="1" value="20" class="optionsInput">
+          <span class="optionsValue"></span>
+        </div>
+
+        <button type="submit" id="saveOptionsBtn">Save & Play</button>
+      </form>
+      <div class="background"></div>
+    </div>
+  </div>
+
+  <div class="mainMenu">
+    <h1>Tip: Avoid red balls.</h1>
+    <h1>ESC - Pause/Settings</h1>
+    <button type="submit" id="playBtn">Play</button>
+    <button type="submit" id="raitingsBtn">Show Ratings</button>
+  </div>
+
+  <div class="ratingsContainer">
+    <div class="ratings">
+      <h1>Last results:</h1>
+    </div>
+    <button id="backBtn">Go back</button>
+  </div>
+
+  <script src="js/rAF.js"></script>
+  <script src="js/js.js"></script>
+</body>
+</html>
